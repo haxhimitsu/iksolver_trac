@@ -212,7 +212,7 @@ void pos_force_controller::frame_pub(const vector<double> &pose ,const vector<do
       double roll, pitch, yaw;
       m.getRPY(roll, pitch, yaw);
 
-      final_torque[0] = roll  - torque[0];
+      final_torque[0] = roll  - torque[0]; // x
       final_torque[1] = pitch - torque[2]; // z
       final_torque[2] = yaw   + torque[1]; // y
 
