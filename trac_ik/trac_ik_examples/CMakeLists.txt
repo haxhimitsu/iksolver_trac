@@ -140,6 +140,14 @@ target_link_libraries(pid_pos_force_ctrl
 )
 
 
+add_executable(pid_pos_force_ctrl_v2 src/pid_pos_force_ctrl_v2.cpp)
+target_link_libraries(pid_pos_force_ctrl_v2
+  ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
+  ${orocos_kdl_LIBRARIES}
+  ${pkg_nlopt_LIBRARIES}
+)
+
 
 add_executable(compliance_pos_force_ctrl src/compliance_pos_force_ctrl.cpp)
 target_link_libraries(compliance_pos_force_ctrl
